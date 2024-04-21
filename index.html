@@ -8,8 +8,6 @@
 </head>
 <body>
 
-
-
     <svg id="butterfly" class="butterfly" data-name="Lager 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412.63 421.51">
         <defs>
           <style>
@@ -72,18 +70,19 @@
         </defs>
         <circle id="blueCircle" class="cls-12" cx="206.31" cy="206.31" r="205.81"/>
         <ellipse id="body" class="cls-9" cx="204.33" cy="223.6" rx="21.02" ry="98.48"/>
+
         <g id="eyeRight">
-          <circle id="eyeWhitebIgLeft" class="cls-6" cx="186.62" cy="146.15" r="16.6"/>
+          <circle id="eyeWhiteBigLeft" class="cls-6" cx="186.62" cy="146.15" r="16.6"/>
           <circle id="eyeBlackLeft" class="cls-5" cx="187.73" cy="147.25" r="8.85"/>
           <path id="eyebrowLeft" class="cls-3" d="M168.92,127.34c0-2.45,8.41-4.43,18.81-4.43"/>
-          <circle id="eyewhitesmLLLeft" class="cls-14" cx="186.62" cy="143.93" r="1.11"/>
-        </g>
+         <!-- <circle id="eyewhiteSmallLeft" class="cls-14" cx="186.62" cy="143.93" r="1.11"/>
+        </g>-->
         <g>
-          <circle id="eyeWhitebIgRight" class="cls-6" cx="224.25" cy="146.15" r="16.6"/>
-          <circle id="eyeBllackRight" class="cls-5" cx="223.14" cy="147.25" r="8.85"/>
+          <circle id="eyeWhiteBigRight" class="cls-6" cx="224.25" cy="146.15" r="16.6"/>
+          <circle id="eyeBlackRight" class="cls-5" cx="223.14" cy="147.25" r="8.85"/>
           <path id="eyebrowRight" class="cls-3" d="M240.65,128.04c.19-2.44-8.05-5.05-18.42-5.84"/>
-          <circle id="eyeWhitesMALLRight" class="cls-14" cx="220.93" cy="142.83" r="1.11"/>
-        </g>
+          <!--<circle id="eyeWhiteSmallLRight" class="cls-14" cx="220.93" cy="142.83" r="1.11"/>
+        </g>-->
         <path class="cls-13" d="M41.5,193.79c15.78,15.36,41.66,14.31,57.87-2.35"/>
         <path id="mouth" class="cls-1" d="M189.44,186.01c20.24,1.55,28.68-12.23,28.68-12.23"/>
         <g id="leftAntenna">
@@ -100,7 +99,7 @@
           <path class="cls-10" d="M190.25,248.22c7.93,7.63,20.53,7.39,28.16-.54"/>
           <path class="cls-10" d="M190.25,261.5c7.93,7.63,20.53,7.39,28.16-.54"/>
         </g>
-        <line id="tightLeg" class="cls-1" x1="214.29" y1="280.04" x2="234.21" y2="328.72"/>
+        <line id="rightLeg" class="cls-1" x1="214.29" y1="280.04" x2="234.21" y2="328.72"/>
         <ellipse id="rightFoot" class="cls-8" cx="239.25" cy="324.22" rx="11.51" ry="5.87" transform="translate(-162.95 299.83) rotate(-50.11)"/>
         <line id="leftLeg" class="cls-1" x1="194.21" y1="281.38" x2="186.63" y2="333.43"/>
         <ellipse id="leftFoot" class="cls-8" cx="180.65" cy="330.27" rx="5.87" ry="11.51" transform="translate(-192.61 281.36) rotate(-53.86)"/>
@@ -142,139 +141,12 @@
           <path id="utrop" class="cls-7" d="M395.48,400.99c-.31-.46-1.34-4.14-3.11-11.03-1.77-6.89-2.65-13.42-2.65-19.59,0-5.15.74-9.4,2.22-12.75,1.48-3.35,3.32-5.02,5.52-5.02,2.05,0,3.78,1.67,5.19,5.02,1.41,3.34,2.12,7.56,2.12,12.66,0,5.73-.77,11.79-2.31,18.18-1.55,6.38-2.71,10.56-3.51,12.53,1.15.78,2.04,2.06,2.68,3.82s.96,3.75.96,5.95c0,2.87-.53,5.29-1.57,7.28-1.05,1.98-2.3,2.97-3.75,2.97s-2.74-.99-3.79-2.97c-1.05-1.98-1.57-4.41-1.57-7.28,0-4.69,1.19-7.95,3.57-9.77Z"/>
         </g>
       </svg>
-    <!-- ----------------------------------------------------------------------------------------
-        --------------------------------- ICE CREAM ANIMATION ----------------------------------
-        -------------------------------------------------------------------------------------- -->
-
-    <svg id="mySVG" width="83" height="120" viewBox="-10 30 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M35.4636 145.604L10.999 53.3656L72.4237 57.6246L35.4636 145.604Z" fill="#FFCB85" fill-opacity="0.71"/>
-        <path d="M71.6921 58.0751L35.5708 144.058L11.6614 53.9128L71.6921 58.0751Z" stroke="#6B3E26" stroke-opacity="0.5"/>
-                    
-        <circle cx="58" cy="25" r="25" fill="#FFC5D9" id="strawberry"/>
-        <circle cx="25" cy="33" r="25" fill="#6B3E26" id="chocolate"/>
-        <circle cx="58" cy="50" r="25" fill="#C2F2D0" id="mint"/>
-    </svg>
-    
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script>
-        let svg = document.getElementById('mySVG');
-        let isAnimating = false;
-        svg.addEventListener('mouseenter', function() {
-            if (!isAnimating) {
-                isAnimating = true;
-                gsap.to('svg', {
-                    duration: 2,
-                    rotation: 3, 
-                    transformOrigin: 'center', 
-                    repeat: 0, 
-                    ease: "power1.inOut"
-                });
-                gsap.to('#strawberry', {
-                    duration: 2,
-                    fill:'#FF92D3',
-                    repeat: -1, 
-                    yoyo: true 
-                });
-                gsap.to('#strawberry', {
-                    duration: 1,
-                    y: -5, 
-                    repeat: 1, 
-                    yoyo: true, 
-                    onComplete: function() {
-                        gsap.to('#strawberry', { 
-                            duration: 0.9,
-                            x: 3,
-                            y: 0
-                        });
-                    }
-                });
-                gsap.to('#mint', {
-                    duration: 1,
-                    x: "+=4",
-                    y: 2,
-                    repeat: 2,
-                    yoyo: true, 
-                    onComplete: function() {
-                        gsap.to('#mint', { 
-                            duration: 0.9,
-                            x: 3,
-                            y: 0,
-                            onComplete: function() {
-                                isAnimating = false;
-                            }
-                        });
-                    }
-                });
-                gsap.to('#chocolate', {
-                    duration: 1,
-                    y: -4,
-                    x: 2, 
-                    onComplete: function() {
-                        gsap.to('#chocolate', { 
-                            duration: 0.5,
-                            x: 0,
-                            y: 0
-                        });
-                    }
-                });
-            }
-        });
-        svg.addEventListener('click', function() {
-            if (!isAnimating) {
-                isAnimating = true;
-                gsap.to('#chocolate', {
-                    duration: 0.4,
-                    y: -30,
-                    x: -2,
-                    ease: "power1.inOut",
-                    onComplete: function() {
-                        gsap.to('#chocolate', { 
-                            duration: 0.6,
-                            y: 0,
-                            x: 0,
-                            onComplete: function() {
-                                isAnimating = false;
-                            }
-                        });
-                    }
-                });
-                gsap.to('#strawberry', {
-                    duration: 0.4,
-                    y: -50,
-                    x: 15,
-                    ease: "power1.inOut",
-                    onComplete: function() {
-                        gsap.to('#strawberry', { 
-                            duration: 0.6,
-                            y: 0,
-                            x: 0,
-                            onComplete: function() {
-                                isAnimating = false;
-                            }
-                        });
-                    }
-                });
-                gsap.to('#mint', {
-                    duration: 0.4,
-                    y: -10,
-                    ease: "power1.inOut",
-                    onComplete: function() {
-                        gsap.to('#mint', {
-                            duration: 0.6,
-                            y: 0,
-                            onComplete: function() {
-                                isAnimating = false;
-                            }
-                        });
-                    }
-                });
-            }
-        })
-        svg.addEventListener('mouseleave', function() {
-            isAnimating = false;
-        });
-    </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
 
 
+
+
+
+      <script src="script.js"></script>
 </body>
 </html>
