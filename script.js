@@ -35,3 +35,31 @@ gsap.to('#utrop', {
     repeat: -1,
     yoyo: true 
 });
+            
+            var svgElement = document.querySelector('#butterfly');
+            svgElement.addEventListener('mouseenter', function() {
+                gsap.to(['#eyeBlackRight', '#eyeBlackLeft'], {
+                    x: 10,
+                    y: 3,
+                    duration: 0.5,
+                });
+            });
+
+            svgElement.addEventListener('mouseleave', function() {
+                gsap.to(['#eyeBlackRight', '#eyeBlackLeft'], {
+                    x: 0,
+                    y: 0,
+                    duration: 0.5,
+                });
+            });
+
+            /*
+                gsap.to(['#eyeBlackRight', '#eyeBlackLeft'], {
+                    x: 10,
+                    y: 3,
+                    duration: 0.5,
+                    //paused: true // Pausa animationen initialt
+                });
+
+                */
+
