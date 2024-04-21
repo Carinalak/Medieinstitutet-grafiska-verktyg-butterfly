@@ -40,6 +40,7 @@ gsap.to('#utrop', {
 
 var svgElement = document.querySelector('#butterfly');
 //var eyebrowLeft = document.querySelector('#eyebrowLeft');
+//var leftWing = document.querySelector('#leftWing');
 
 svgElement.addEventListener('mouseenter', function(event) {
     var rect = svgElement.getBoundingClientRect();
@@ -82,32 +83,26 @@ svgElement.addEventListener('mouseleave', function() {
             y: 0,
             duration: 0.5,
     });
-    
-});
-/*
-
-var svgElement = document.querySelector('#butterfly');
-
-svgElement.addEventListener('mouseenter', function(event) {
-    var rect = svgElement.getBoundingClientRect();
-    var mouseX = event.clientX - rect.left;
-    var mouseY = event.clientY - rect.top; 
-
-    var offsetX = mouseX > rect.width / 2 ? 10 : -10;
-    var offsetY = mouseY > rect.height / 2 ? 3 : -3;
-
-    gsap.to(['#eyeBlackRight', '#eyeBlackLeft'], {
-        x: offsetX,
-        y: offsetY,
-        duration: 0.5,
+    leftWing.addEventListener('mouseenter', function() {
+        gsap.to(leftWing, {
+            x: 2,
+            y: 3,
+            duration: 0.5,
+            repeat: 3,
+            ease: "power1.inOut",
+            yoyo: true,
+        });
     });
+    rightWing.addEventListener('mouseenter', function() {
+        gsap.to(rightWing, {
+            x: 2,
+            y: 3,
+            duration: 0.5,
+            repeat: 3,
+            ease: "power1.inOut",
+            yoyo: true,
+        });
+    });
+
 });
 
-svgElement.addEventListener('mouseleave', function() {
-    gsap.to(['#eyeBlackRight', '#eyeBlackLeft'], {
-        x: 0,
-        y: 0,
-        duration: 0.5,
-    });
-});
-*/
