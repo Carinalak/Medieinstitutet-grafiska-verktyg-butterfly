@@ -37,10 +37,9 @@ gsap.to('#utrop', {
 });
      
 
-
 var svgElement = document.querySelector('#butterfly');
-//var eyebrowLeft = document.querySelector('#eyebrowLeft');
-//var leftWing = document.querySelector('#leftWing');
+var leftWing = document.querySelector('#leftWing');
+var rightWing = document.querySelector('#rightWing');
 
 svgElement.addEventListener('mouseenter', function(event) {
     var rect = svgElement.getBoundingClientRect();
@@ -78,31 +77,64 @@ svgElement.addEventListener('mouseleave', function() {
         rotation: 0,
         duration: 0.5,
     });    
-        gsap.to(eyebrowRight, {
-            rotation: 0,
-            y: 0,
-            duration: 0.5,
+    gsap.to(eyebrowRight, {
+        rotation: 0,
+        y: 0,
+        duration: 0.5,
     });
-    leftWing.addEventListener('mouseenter', function() {
-        gsap.to(leftWing, {
-            x: 2,
-            y: 3,
-            duration: 0.5,
-            repeat: 3,
-            ease: "power1.inOut",
-            yoyo: true,
-        });
-    });
-    rightWing.addEventListener('mouseenter', function() {
-        gsap.to(rightWing, {
-            x: 2,
-            y: 3,
-            duration: 0.5,
-            repeat: 3,
-            ease: "power1.inOut",
-            yoyo: true,
-        });
-    });
+});
 
+leftWing.addEventListener('mouseenter', function() {
+    gsap.to(leftWing, {
+        x: 2,
+        y: 3,
+        duration: 0.5,
+        repeat: 3,
+        ease: "power1.inOut",
+        yoyo: true,
+    });
+});
+
+rightWing.addEventListener('mouseenter', function() {
+    gsap.to(rightWing, {
+        x: 2,
+        y: 3,
+        duration: 0.5,
+        repeat: 3,
+        ease: "power1.inOut",
+        yoyo: true,
+    });
+});
+
+leftDot.addEventListener('mouseenter', function() {
+    gsap.to(leftDot, {
+        rotation: "+=360", 
+        duration: 1,
+        transformOrigin: "center center",
+        ease: "none"
+    });
+});
+
+leftDot.addEventListener('mouseleave', function() {
+    gsap.to(leftDot, {
+        rotation: 0,
+        duration: 0
+    });
+});
+
+rightDot.addEventListener('mouseenter', function() {
+    gsap.to(rightDot, {
+        rotation: "+=360",
+        duration: 1,
+        transformOrigin: "center center",
+        ease: "none"
+    });
+});
+
+rightDot.addEventListener('mouseleave', function() {
+    gsap.to(rightDot, {
+        rotation: 0,
+        duration: 0
+    });
 });
 
