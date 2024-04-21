@@ -1,5 +1,5 @@
 
-
+// ---------------------------- LETTERS ---------------------------------- //
 gsap.to('#h', { 
     fill: '#7f066e', 
     duration: 1, 
@@ -36,6 +36,9 @@ gsap.to('#utrop', {
     yoyo: true 
 });
      
+
+// ---------------------------- BUTTERFLY ---------------------------------- //
+
 
 var svgElement = document.querySelector('#butterfly');
 var leftWing = document.querySelector('#leftWing');

@@ -1,5 +1,10 @@
 # Butterfly animation
 
+- This is a butterfly animation. The Butterfly is designed in Adobe Illustrator and exported as a SVG.
+
+- This project uses JavaScript Vanilla, HTML, CSS, Greensock.
+
+- You don't have to install anything specific to run this project.
 
 
 
